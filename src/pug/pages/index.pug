@@ -1,0 +1,35 @@
+extends ../includes/html
+
+block variables 
+
+block content    
+
+  .wrapper 
+
+    svg.logo #[use(xlink:href='img/sprites.svg?#bmw_logo')]
+
+    .like 
+      button.like__button
+        svg.like__button-icon #[use(xlink:href='img/sprites.svg?#like_icon')]
+
+      .like__counter
+        span.like__counter-text like:&nbsp;
+        span.like__counter-number 330
+
+    ul.social__list
+      mixin social__list-item(link, icon)
+        li.social__list-item
+          a.social__link(href="#", onclick="window.open('https://"+link+"' + encodeURIComponent(location.href)); return false;") 
+            svg.social__link-icon #[use(xlink:href='img/sprites.svg?#'+icon+'')]
+      +social__list-item("connect.ok.ru/dk?st.cmd=WidgetSharePreview&st.shareUrl=", "ok_icon")
+      +social__list-item("vk.com/share.php?url=", "vk_icon")
+      +social__list-item("www.facebook.com/sharer/sharer.php?u=", "fb_icon")
+
+    .modal
+      .modal__window
+        .modal__header 
+          p.modal__title
+          button.modal__close
+        p.modal__subtitle
+        p.modal__text
+

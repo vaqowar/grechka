@@ -1,0 +1,59 @@
+<!DOCTYPE html    >
+<html lang="en">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <title>grechka</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="css/main.css"/>
+  </head>
+  <body>
+    <div class="preloader active"> 
+      <div class="preloader__ball"></div>
+      <div class="preloader__ball"></div>
+      <div class="preloader__ball"></div>
+      <div class="preloader__ball"></div>
+      <div class="preloader__ball"></div>
+    </div>
+    <div class="wrapper"> 
+      <svg class="logo">
+        <use xlink:href="img/sprites.svg?#bmw_logo"></use>
+      </svg>
+      <div class="like"> 
+        <button class="like__button">
+          <svg class="like__button-icon">
+            <use xlink:href="img/sprites.svg?#like_icon"></use>
+          </svg>
+        </button>
+        <div class="like__counter"><span class="like__counter-text">like:&nbsp;</span><span class="like__counter-number">330</span></div>
+      </div>
+      <ul class="social__list">
+                <li class="social__list-item"><a class="social__link" href="#" onclick="window.open('https://connect.ok.ru/dk?st.cmd=WidgetSharePreview&amp;st.shareUrl=' + encodeURIComponent(location.href)); return false;"> 
+                    <svg class="social__link-icon">
+                      <use xlink:href="img/sprites.svg?#ok_icon"></use>
+                    </svg></a></li>
+                <li class="social__list-item"><a class="social__link" href="#" onclick="window.open('https://vk.com/share.php?url=' + encodeURIComponent(location.href)); return false;"> 
+                    <svg class="social__link-icon">
+                      <use xlink:href="img/sprites.svg?#vk_icon"></use>
+                    </svg></a></li>
+                <li class="social__list-item"><a class="social__link" href="#" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(location.href)); return false;"> 
+                    <svg class="social__link-icon">
+                      <use xlink:href="img/sprites.svg?#fb_icon"></use>
+                    </svg></a></li>
+      </ul>
+      <div class="modal">
+        <div class="modal__window">
+          <div class="modal__header"> 
+            <p class="modal__title"></p>
+            <button class="modal__close"></button>
+          </div>
+          <p class="modal__subtitle"></p>
+          <p class="modal__text"></p>
+        </div>
+      </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"> </script>
+    <script src="js/main.js"></script>
+  </body>
+</html>
